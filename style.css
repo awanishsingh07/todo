@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: #151515;
+    color: rgb(210, 210, 210);
+}
+
+/*---------------- navbar -------------------*/
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #151515;
+    border: 2px solid rgba(56, 56, 56, 0.39);
+    border-radius: 0 0 0.5rem 0.5rem;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.777); */
+}
+
+/* Logo styling */
+.navbar .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(200, 200, 200);
+    letter-spacing: 0.03rem;
+}
+
+/* GitHub link styling */
+.navbar .github-link {
+    font-size: 1.4rem;
+    color: rgb(200, 200, 200);
+    transition: transform 0.2s ease;
+}
+
+.navbar .github-link:hover {
+    transform: scale(1.2);
+}
+
+/*---------------- main contianer -------------------*/
+
+.mainContainer{
+    /* border: 2px solid red; */
+    /* width: fit-content; */
+    width: 80%;
+    max-width: 500px;
+    margin: 1rem auto;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+/*---------------- header -------------------*/
+.mainContainer header{
+    position: sticky;
+    top: 0;
+    background-color: #151515;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 100;
+    width: 100%;
+}
+
+.mainContainer header h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* .loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid slateblue;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 1s linear infinite;
+    margin: 1rem auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
+
+
+.inputContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 2.5rem;
+    gap: 0.5rem;
+
+}
+
+.inputContainer #taskInput{
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 0 1rem;
+    letter-spacing: 0.05rem;
+    color: rgb(46, 46, 46);
+    background-color: rgb(210, 210, 210);
+
+}
+
+.inputContainer .addBtn{
+    padding: 0.5rem 2rem;
+    border: none;
+    background-color: lightseagreen;
+    background-color: rgb(25, 175, 167);
+    color: #151515;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    transform: scale(1);
+}
+
+.inputContainer .addBtn:active{
+    transform: scale(1.05);
+}
+
+
+/*---------------- todo list -------------------*/
+
+.todoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 98%;
+}
+
+.todoContainer .todo{
+    border: 2px solid rgb(90, 90, 90);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: rgb(210, 210, 210);
+}
+
+.todoContainer div{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.todoContainer .todo p {
+    word-break: break-word;      /* Break long words */
+    overflow-wrap: break-word;   /* Ensures wrapping across all browsers */
+    white-space: normal;         /* Allow normal wrapping */
+}
+
+
+.todoContainer .todo button{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transform: scale(1);
+    font-size: 1.05rem;
+}
+
+.todoContainer .todo button .fa-pen{
+    color: rgb(21, 158, 151);
+    margin: 0 0.4rem;
+}
+
+.todoContainer .todo button .fa-trash{
+    color: rgb(199, 20, 56);
+ 
+    margin: 0 0.4rem;
+}
+
+.todoContainer .todo button:active{
+    transform: scale(1.2);
+}
+
+
+/*---------------- edit input js functionality -------------------*/
+
+.todoContainer .todo button.saveBtn{
+    color: rgb(21, 158, 151);
+    margin: 0 0.4rem;
+    display: none;
+}
+
+#editInput{
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #151515;
+    border: 1px solid lightskyblue;
+    color: rgb(205, 204, 204);
+    outline: none;
+    border-radius: 0.5rem;
+    display: none;
+    width: 90%;
+}
+
+/*---------------- task completed js functionality -------------------*/
+
+.completed {
+    text-decoration: line-through;
+    text-decoration-color: gold;
+    text-decoration-thickness: 0.15rem;
+}
+
