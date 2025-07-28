@@ -17,7 +17,7 @@ A sleek, minimal **Todo App** that lets you **add, edit, delete, and mark tasks 
 
 ## 🌐 Live Demo
 
-> 🔗 [async-todo.netlify.app](https://todo-chi-cyan.vercel.app/)
+> 🔗 [async-todo.vercel.app](https://todo-chi-cyan.vercel.app/)
 
 <br/>
 
